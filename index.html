@@ -152,6 +152,7 @@
     min-width: 280px;
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
   }
   .cta::after {
     content: "→";
@@ -1246,14 +1247,22 @@
   ========================================= */
   @media (max-width: 768px) {
     section { padding: 64px 0; }
-    .section-title { margin-bottom: 36px; }
+    .section-title { font-size: clamp(19px, 5.2vw, 26px); margin-bottom: 36px; letter-spacing: 0.02em; }
 
     .fv-inner { padding: 40px 16px 60px; }
     .fv-banner { margin-bottom: 32px; border-radius: 10px; }
+    .fv-eyebrow { font-size: 11px; letter-spacing: 0.3em; white-space: nowrap; }
+    .fv-eyebrow::before, .fv-eyebrow::after { width: 18px; margin: 0 8px; }
     .fv-title { font-size: 26px; line-height: 1.55; }
     .fv-sub { font-size: 15px; }
     .fv-meta { flex-direction: column; gap: 16px; padding: 20px; }
     .fv-meta-item { justify-content: flex-start; }
+
+    .solution-name { font-size: clamp(20px, 5.4vw, 30px); letter-spacing: 0.04em; }
+
+    .cta { font-size: 14px; padding: 18px 18px; letter-spacing: 0.03em; gap: 6px; }
+    .cta::after { font-size: 15px; }
+    .cta-large { font-size: 14px; padding: 20px 18px; }
 
     .cause-compare {
       grid-template-columns: 1fr;
@@ -1302,8 +1311,7 @@
 
     .core { padding: 88px 0; }
 
-    .cta { min-width: 0; width: 100%; max-width: 340px; padding: 20px 24px; font-size: 15px; }
-    .cta-large { padding: 22px 28px; font-size: 16px; }
+    .cta { min-width: 0; width: 100%; max-width: 340px; }
 
     .sticky-cta { display: block; }
     body.has-sticky-space { padding-bottom: 88px; }
@@ -1312,6 +1320,16 @@
   @media (max-width: 420px) {
     .fv-title { font-size: 23px; }
     .container, .container-narrow { padding: 0 18px; }
+
+    .cta { font-size: 13px; padding: 18px 16px; letter-spacing: 0.02em; gap: 6px; }
+    .cta-large { font-size: 14px; padding: 20px 16px; }
+    .cta::after { display: none; }
+
+    .fv-eyebrow { font-size: 10px; letter-spacing: 0.28em; }
+    .fv-eyebrow::before, .fv-eyebrow::after { width: 14px; margin: 0 6px; }
+
+    .section-title { font-size: 19px; }
+    .solution-name { font-size: 20px; }
   }
 </style>
 </head>
