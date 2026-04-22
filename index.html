@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="AIで書いているのに、なぜあなたの発信は埋もれるのか?書き方ではなく『選ばれる設計』を学ぶ、ワンランク上のAI×ライティングセミナー。2026年4月27日(月)10:00〜13:00 オンライン開催。" />
+<title>ワンランク上のAI×ライティングセミナー | 埋もれない発信者になる</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  /* =========================================
+     Base
+  ========================================= */
+  :root {
+    --navy-900: #0a1a33;
+    --navy-800: #0f2447;
+    --navy-700: #16305c;
+    --navy-600: #1e3a6f;
+    --gold-500: #c9a961;
+    --gold-400: #d4b876;
+    --gold-300: #e3cd9a;
+    --gold-600: #b08f4a;
+    --ivory:    #faf7f0;
+    --cream:    #f5efe1;
+    --grey-100: #f4f4f6;
+    --grey-300: #d6d8de;
+    --grey-500: #8a8e99;
+    --grey-700: #4a4e5a;
+    --text:     #1a1f2c;
+    --text-muted: #5a6072;
+
+    --sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    --serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --latin: "Cormorant Garamond", serif;
+
+    --shadow-sm: 0 2px 8px rgba(10, 26, 51, 0.08);
+    --shadow-md: 0 8px 24px rgba(10, 26, 51, 0.12);
+    --shadow-lg: 0 20px 48px rgba(10, 26, 51, 0.18);
+    --shadow-gold: 0 10px 28px rgba(201, 169, 97, 0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--text);
+    background: var(--ivory);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .container-narrow {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 88px 0; position: relative; }
+
+  /* Headings */
+  h1, h2, h3, h4 { font-family: var(--sans); font-weight: 700; line-height: 1.45; letter-spacing: 0.02em; }
+
+  /* =========================================
+     Eyebrow / Section headings
+  ========================================= */
+  .eyebrow {
+    display: inline-block;
+    font-family: var(--latin);
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    color: var(--gold-500);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 40px;
+  }
+  .eyebrow::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 28px; height: 1px;
+    background: var(--gold-500);
+  }
+
+  .section-title {
+    font-family: var(--sans);
+    font-size: clamp(24px, 4.5vw, 34px);
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--navy-800);
+    margin-bottom: 48px;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+  .section-title .accent {
+    color: var(--gold-600);
+    position: relative;
+  }
+
+  .section-head { text-align: center; margin-bottom: 56px; }
+  .section-head .eyebrow { padding-left: 0; padding: 0 40px; }
+  .section-head .eyebrow::before {
+    left: 0; right: auto;
+  }
+  .section-head .eyebrow::after {
+    content: "";
+    position: absolute;
+    right: 0; top: 50%;
+    width: 28px; height: 1px;
+    background: var(--gold-500);
+  }
+
+  /* =========================================
+     CTA Button
+  ========================================= */
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-400) 50%, var(--gold-500) 100%);
+    color: var(--navy-900);
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    padding: 22px 44px;
+    border-radius: 64px;
+    border: 1px solid var(--gold-600);
+    box-shadow: var(--shadow-gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-align: center;
+    min-width: 280px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::after {
+    content: "→";
+    font-size: 20px;
+    transition: transform 0.25s ease;
+  }
+  .cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(201, 169, 97, 0.48);
+  }
+  .cta:hover::after { transform: translateX(6px); }
+
+  .cta-large {
+    font-size: 19px;
+    padding: 26px 52px;
+    min-width: 320px;
+  }
+
+  .cta-note {
+    display: block;
+    margin-top: 14px;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--gold-400);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .cta-wrap { text-align: center; }
+
+  /* =========================================
+     SECTION 1: First View
+  ========================================= */
+  .fv {
+    background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    color: #fff;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .fv::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(201, 169, 97, 0.15) 0%, transparent 45%),
+      radial-gradient(circle at 80% 90%, rgba(201, 169, 97, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .fv-inner {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 56px 24px 72px;
+    z-index: 1;
+  }
+
+  .fv-banner {
+    margin: 0 auto 44px;
+    max-width: 720px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(201, 169, 97, 0.25);
+    position: relative;
+  }
+  .fv-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .fv-eyebrow {
+    font-family: var(--latin);
+    font-size: 14px;
+    letter-spacing: 0.5em;
+    color: var(--gold-400);
+    text-align: center;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .fv-eyebrow::before, .fv-eyebrow::after {
+    content: "";
+    display: inline-block;
+    width: 32px; height: 1px;
+    background: var(--gold-500);
+    vertical-align: middle;
+    margin: 0 16px;
+  }
+
+  .fv-title {
+    font-family: var(--sans);
+    font-size: clamp(26px, 5.6vw, 44px);
+    font-weight: 900;
+    line-height: 1.55;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+    color: #ffffff;
+  }
+  .fv-title .gold {
+    color: var(--gold-400);
+    background: linear-gradient(180deg, transparent 60%, rgba(201, 169, 97, 0.22) 60%);
+    padding: 0 4px;
+  }
+  .fv-title .q {
+    color: var(--gold-400);
+    font-family: var(--latin);
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-left: 4px;
+  }
+
+  .fv-sub {
+    text-align: center;
+    font-family: var(--serif);
+    font-size: clamp(15px, 2.2vw, 18px);
+    line-height: 1.95;
+    color: var(--gold-300);
+    margin-bottom: 32px;
+    letter-spacing: 0.06em;
+  }
+
+  .fv-target {
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 2;
+    color: #e8e4d8;
+    margin-bottom: 44px;
+    letter-spacing: 0.04em;
+  }
+  .fv-target .dash { color: var(--gold-400); }
+
+  .fv-meta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+    padding: 22px 28px;
+    border-top: 1px solid rgba(201, 169, 97, 0.3);
+    border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+  }
+  .fv-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--sans);
+    font-size: 15px;
+    letter-spacing: 0.06em;
+  }
+  .fv-meta-icon {
+    width: 36px; height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gold-500);
+    border-radius: 50%;
+    color: var(--gold-400);
+    font-size: 15px;
+  }
+  .fv-meta-label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold-400);
+    font-family: var(--latin);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .fv-cta-wrap { text-align: center; }
+
+  .fv-price-line {
+    margin-top: 20px;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .fv-price-line s { opacity: 0.7; margin-right: 10px; }
+
+  /* =========================================
+     SECTION 2: Empathy / Problem
+  ========================================= */
+  .empathy { background: var(--ivory); }
+  .checklist {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 28px;
+    background: #fff;
+    border-left: 3px solid var(--gold-500);
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text);
+  }
+  .check-box {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    border: 1.5px solid var(--gold-500);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    color: var(--gold-600);
+    font-weight: 700;
+  }
+  .empathy-tail {
+    text-align: center;
+    margin-top: 48px;
+    font-family: var(--sans);
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+  .empathy-tail .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* =========================================
+     SECTION 3: Real Cause
+  ========================================= */
+  .cause { background: var(--cream); }
+  .cause-compare {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    max-width: 780px;
+    margin: 0 auto 40px;
+    align-items: stretch;
+  }
+  .cause-card {
+    padding: 40px 28px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: var(--sans);
+  }
+  .cause-card--old {
+    background: #fff;
+    border: 1px solid var(--grey-300);
+    color: var(--grey-500);
+  }
+  .cause-card--new {
+    background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-700) 100%);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+  }
+  .cause-label {
+    font-family: var(--latin);
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    margin-bottom: 16px;
+    opacity: 0.9;
+  }
+  .cause-card--new .cause-label { color: var(--gold-400); }
+  .cause-title {
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 0.08em;
+  }
+  .cause-card--new .cause-title { color: var(--gold-400); }
+  .cause-note {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+  }
+  .cause-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-500);
+    font-size: 28px;
+  }
+
+  .cause-text {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 2.1;
+    color: var(--text);
+  }
+  .cause-text strong {
+    color: var(--navy-800);
+    background: linear-gradient(180deg, transparent 60%, var(--gold-300) 60%);
+    font-weight: 700;
+  }
+
+  /* =========================================
+     SECTION 4: Solution
+  ========================================= */
+  .solution {
+    background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .solution::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(201, 169, 97, 0.15), transparent 60%);
+    pointer-events: none;
+  }
+  .solution-inner { position: relative; z-index: 1; }
+  .solution-mark {
+    font-family: var(--latin);
+    font-size: 13px;
+    letter-spacing: 0.5em;
+    color: var(--gold-400);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .solution-name {
+    font-family: var(--sans);
+    font-weight: 900;
+    font-size: clamp(26px, 5vw, 40px);
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    margin-bottom: 32px;
+  }
+  .solution-name .gold { color: var(--gold-400); }
+  .solution-divider {
+    width: 48px; height: 1px;
+    background: var(--gold-500);
+    margin: 0 auto 28px;
+  }
+  .solution-desc {
+    font-family: var(--serif);
+    font-size: clamp(15px, 2.2vw, 17px);
+    line-height: 2.1;
+    color: var(--gold-300);
+    max-width: 620px;
+    margin: 0 auto;
+    letter-spacing: 0.06em;
+  }
+  .solution-keywords {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+  }
+  .solution-keyword {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: var(--gold-400);
+    padding: 10px 22px;
+    border: 1px solid var(--gold-500);
+    border-radius: 40px;
+  }
+
+  /* =========================================
+     SECTION 5: Before After
+  ========================================= */
+  .ba { background: var(--ivory); }
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .ba-card {
+    padding: 36px 28px;
+    border-radius: 10px;
+  }
+  .ba-card--before {
+    background: #e9eaee;
+    color: var(--grey-700);
+  }
+  .ba-card--after {
+    background: linear-gradient(180deg, #fdf6e3 0%, var(--cream) 100%);
+    color: var(--navy-800);
+    border: 1px solid var(--gold-400);
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+  .ba-label {
+    font-family: var(--latin);
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .ba-card--before .ba-label { color: var(--grey-500); }
+  .ba-card--after .ba-label { color: var(--gold-600); }
+  .ba-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .ba-list li {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.7;
+    padding-left: 24px;
+    position: relative;
+  }
+  .ba-card--before li::before {
+    content: "✕";
+    position: absolute; left: 0; top: 0;
+    color: var(--grey-500);
+    font-weight: 700;
+  }
+  .ba-card--after li::before {
+    content: "✓";
+    position: absolute; left: 0; top: 0;
+    color: var(--gold-600);
+    font-weight: 700;
+  }
+  .ba-arrow {
+    display: none;
+  }
+
+  /* =========================================
+     SECTION 6: Curriculum
+  ========================================= */
+  .curriculum { background: var(--cream); }
+  .curriculum-subtitle {
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-top: -32px;
+    margin-bottom: 48px;
+    letter-spacing: 0.06em;
+  }
+  .step-list {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .step-item {
+    display: flex;
+    gap: 28px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 32px 32px 32px 28px;
+    box-shadow: var(--shadow-sm);
+    border-left: 3px solid var(--gold-500);
+    position: relative;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .step-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
+    color: var(--gold-400);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--latin);
+    font-weight: 600;
+    font-size: 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .step-body { flex: 1; }
+  .step-title {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy-800);
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .step-desc {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-muted);
+  }
+
+  .curriculum-cta { margin-top: 56px; }
+
+  /* =========================================
+     SECTION 7: 3 Features
+  ========================================= */
+  .features { background: var(--ivory); }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .feature-card {
+    background: #fff;
+    padding: 44px 28px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 3px solid var(--gold-500);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+  }
+  .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .feature-num {
+    font-family: var(--latin);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--gold-500);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+  .feature-title {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--navy-800);
+    margin-bottom: 16px;
+    letter-spacing: 0.06em;
+  }
+  .feature-desc {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-muted);
+  }
+
+  /* =========================================
+     SECTION 8: Core Message
+  ========================================= */
+  .core {
+    background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .core::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 10% 20%, rgba(201, 169, 97, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(201, 169, 97, 0.08) 0%, transparent 40%);
+  }
+  .core-inner {
+    position: relative; z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .core-text {
+    font-family: var(--serif);
+    font-size: clamp(18px, 3vw, 23px);
+    line-height: 2.3;
+    color: #eae3cc;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .core-divider {
+    width: 60px; height: 1px;
+    background: var(--gold-500);
+    margin: 40px auto;
+  }
+  .core-highlight {
+    font-family: var(--sans);
+    font-size: clamp(22px, 4vw, 30px);
+    font-weight: 700;
+    color: var(--gold-400);
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+  }
+  .core-highlight strong {
+    color: #fff;
+    background: linear-gradient(180deg, transparent 60%, rgba(201, 169, 97, 0.35) 60%);
+    padding: 0 6px;
+  }
+
+  /* =========================================
+     SECTION 9: Instructor
+  ========================================= */
+  .instructor { background: var(--ivory); }
+  .instructor-card {
+    max-width: 780px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .instructor-photo {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--gold-500);
+    box-shadow: var(--shadow-md);
+    background: var(--navy-800);
+  }
+  .instructor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .instructor-info { flex: 1; }
+  .instructor-role {
+    font-family: var(--latin);
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--gold-500);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .instructor-name {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--navy-800);
+    margin-bottom: 6px;
+    letter-spacing: 0.06em;
+  }
+  .instructor-subtitle {
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .instructor-list {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  .instructor-list li {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 2;
+    padding-left: 20px;
+    position: relative;
+    color: var(--text);
+  }
+  .instructor-list li::before {
+    content: "•";
+    position: absolute; left: 4px;
+    color: var(--gold-500);
+    font-weight: 700;
+  }
+  .instructor-bio {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-muted);
+    padding-top: 18px;
+    border-top: 1px solid var(--grey-300);
+  }
+
+  /* =========================================
+     SECTION 10: For Whom
+  ========================================= */
+  .audience { background: var(--cream); }
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .audience-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 36px 28px;
+    box-shadow: var(--shadow-sm);
+  }
+  .audience-card--yes { border-top: 3px solid var(--gold-500); }
+  .audience-card--no  { border-top: 3px solid var(--grey-300); }
+  .audience-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+  }
+  .audience-head .mark {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .audience-card--yes .audience-head .mark {
+    background: var(--gold-500); color: #fff;
+  }
+  .audience-card--yes .audience-head { color: var(--navy-800); }
+  .audience-card--no .audience-head .mark {
+    background: var(--grey-300); color: var(--grey-700);
+  }
+  .audience-card--no .audience-head { color: var(--grey-700); }
+  .audience-list { list-style: none; }
+  .audience-list li {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.9;
+    padding: 6px 0 6px 22px;
+    position: relative;
+  }
+  .audience-card--yes .audience-list li::before {
+    content: "✓";
+    position: absolute; left: 0;
+    color: var(--gold-500); font-weight: 700;
+  }
+  .audience-card--no .audience-list li::before {
+    content: "—";
+    position: absolute; left: 0;
+    color: var(--grey-500); font-weight: 700;
+  }
+
+  /* =========================================
+     SECTION 11: Overview Table
+  ========================================= */
+  .overview { background: var(--ivory); }
+  .overview-table {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .overview-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-bottom: 1px solid var(--grey-100);
+  }
+  .overview-row:last-child { border-bottom: none; }
+  .overview-key {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy-800);
+    background: var(--cream);
+    padding: 22px 24px;
+    letter-spacing: 0.1em;
+  }
+  .overview-val {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--text);
+    padding: 22px 28px;
+    line-height: 1.8;
+  }
+
+  /* =========================================
+     SECTION 12: Price
+  ========================================= */
+  .price {
+    background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .price::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(201, 169, 97, 0.12), transparent 55%);
+  }
+  .price-inner { position: relative; z-index: 1; }
+  .price-card {
+    max-width: 620px;
+    margin: 0 auto 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--gold-500);
+    border-radius: 14px;
+    padding: 48px 32px;
+    text-align: center;
+    box-shadow: 0 0 0 1px rgba(201, 169, 97, 0.15), var(--shadow-lg);
+  }
+  .price-normal {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+  .price-normal s { letter-spacing: 0.1em; }
+  .price-early-label {
+    display: inline-block;
+    font-family: var(--latin);
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--navy-900);
+    background: var(--gold-400);
+    padding: 4px 18px;
+    border-radius: 40px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .price-early {
+    font-family: var(--sans);
+    font-weight: 900;
+    color: var(--gold-400);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+  .price-early .num {
+    font-size: clamp(52px, 10vw, 80px);
+    font-family: var(--latin);
+    font-weight: 600;
+  }
+  .price-early .yen {
+    font-size: clamp(22px, 3vw, 28px);
+    margin-left: 6px;
+  }
+  .price-limit {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--gold-300);
+    margin-top: 6px;
+  }
+
+  .bonus {
+    max-width: 620px;
+    margin: 0 auto 44px;
+    padding: 28px 32px;
+    background: rgba(201, 169, 97, 0.08);
+    border: 1px dashed rgba(201, 169, 97, 0.5);
+    border-radius: 10px;
+  }
+  .bonus-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--gold-400);
+    letter-spacing: 0.16em;
+    margin-bottom: 16px;
+    justify-content: center;
+  }
+  .bonus-head::before, .bonus-head::after {
+    content: "";
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: rgba(201, 169, 97, 0.4);
+  }
+  .bonus-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bonus-list li {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.8;
+    color: #f0ead8;
+    padding-left: 22px;
+    position: relative;
+  }
+  .bonus-list li::before {
+    content: "◆";
+    color: var(--gold-400);
+    position: absolute; left: 0;
+    font-size: 11px;
+    top: 7px;
+  }
+
+  /* =========================================
+     SECTION 13: FAQ
+  ========================================= */
+  .faq { background: var(--ivory); }
+  .faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .faq-item {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--grey-100);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    border: none;
+    padding: 22px 28px 22px 60px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--navy-800);
+    cursor: pointer;
+    position: relative;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    transition: background 0.2s ease;
+  }
+  .faq-q:hover { background: var(--cream); }
+  .faq-q::before {
+    content: "Q";
+    position: absolute;
+    left: 22px; top: 50%;
+    transform: translateY(-50%);
+    width: 28px; height: 28px;
+    background: var(--gold-500);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--latin);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .faq-q::after {
+    content: "+";
+    position: absolute;
+    right: 24px; top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--gold-500);
+    transition: transform 0.3s ease;
+  }
+  .faq-item.open .faq-q::after { transform: translateY(-50%) rotate(45deg); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: var(--cream);
+  }
+  .faq-a-inner {
+    padding: 22px 28px 22px 60px;
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.95;
+    color: var(--text);
+    position: relative;
+  }
+  .faq-a-inner::before {
+    content: "A";
+    position: absolute;
+    left: 22px; top: 22px;
+    width: 28px; height: 28px;
+    background: var(--navy-800);
+    color: var(--gold-400);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--latin);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* =========================================
+     SECTION 14: Final Message
+  ========================================= */
+  .final {
+    background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .final::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(201, 169, 97, 0.1), transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(201, 169, 97, 0.1), transparent 50%);
+  }
+  .final-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .final-title {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: clamp(22px, 4vw, 30px);
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+    margin-bottom: 32px;
+  }
+  .final-title .gold { color: var(--gold-400); }
+  .final-text {
+    font-family: var(--serif);
+    font-size: clamp(15px, 2.4vw, 17px);
+    line-height: 2.2;
+    color: #d9d1b9;
+    margin-bottom: 48px;
+    letter-spacing: 0.06em;
+  }
+
+  /* =========================================
+     Footer
+  ========================================= */
+  footer {
+    background: #060e1f;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 48px 0 36px;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+  .footer-links {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s ease;
+  }
+  .footer-links a:hover { color: var(--gold-400); }
+  .copyright {
+    font-family: var(--latin);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  /* =========================================
+     Sticky CTA (Mobile)
+  ========================================= */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(180deg, rgba(10, 26, 51, 0) 0%, rgba(10, 26, 51, 0.92) 30%);
+    padding: 14px 16px 18px;
+    z-index: 999;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    display: none;
+  }
+  .sticky-cta.show { transform: translateY(0); }
+  .sticky-cta .cta {
+    min-width: 0;
+    width: 100%;
+    max-width: 420px;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+
+  /* =========================================
+     Responsive
+  ========================================= */
+  @media (max-width: 768px) {
+    section { padding: 64px 0; }
+    .section-title { margin-bottom: 36px; }
+
+    .fv-inner { padding: 40px 16px 60px; }
+    .fv-banner { margin-bottom: 32px; border-radius: 10px; }
+    .fv-title { font-size: 26px; line-height: 1.55; }
+    .fv-sub { font-size: 15px; }
+    .fv-meta { flex-direction: column; gap: 16px; padding: 20px; }
+    .fv-meta-item { justify-content: flex-start; }
+
+    .cause-compare {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .cause-arrow { transform: rotate(90deg); }
+
+    .ba-grid { grid-template-columns: 1fr; gap: 16px; }
+
+    .step-item { padding: 24px 20px; gap: 18px; }
+    .step-num { width: 48px; height: 48px; font-size: 18px; }
+    .step-title { font-size: 17px; }
+
+    .feature-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .instructor-card {
+      grid-template-columns: 1fr;
+      padding: 36px 24px;
+      gap: 24px;
+      text-align: center;
+    }
+    .instructor-photo {
+      margin: 0 auto;
+      width: 140px; height: 140px;
+      font-size: 36px;
+    }
+    .instructor-list li { text-align: left; }
+
+    .audience-grid { grid-template-columns: 1fr; gap: 16px; }
+
+    .overview-row { grid-template-columns: 1fr; }
+    .overview-key { padding: 14px 24px 6px; background: var(--cream); }
+    .overview-val { padding: 10px 24px 18px; }
+
+    .price-card { padding: 36px 24px; }
+    .bonus { padding: 24px 20px; }
+
+    .faq-q { padding: 18px 50px 18px 54px; font-size: 15px; }
+    .faq-q::before { left: 18px; }
+    .faq-q::after { right: 18px; }
+    .faq-a-inner { padding: 18px 24px 18px 54px; }
+    .faq-a-inner::before { left: 18px; }
+
+    .core { padding: 88px 0; }
+
+    .cta { min-width: 0; width: 100%; max-width: 340px; padding: 20px 24px; font-size: 15px; }
+    .cta-large { padding: 22px 28px; font-size: 16px; }
+
+    .sticky-cta { display: block; }
+    body.has-sticky-space { padding-bottom: 88px; }
+  }
+
+  @media (max-width: 420px) {
+    .fv-title { font-size: 23px; }
+    .container, .container-narrow { padding: 0 18px; }
+  }
+</style>
+</head>
+
+<body class="has-sticky-space">
+
+  <!-- ========== SECTION 1: First View ========== -->
+  <section class="fv">
+    <div class="fv-inner">
+
+      <div class="fv-banner">
+        <img src="banner.png" alt="埋もれずに選ばれる発信者になる ワンランク上のAI×ライティング1day講座" />
+      </div>
+
+      <p class="fv-eyebrow">Online Seminar</p>
+
+      <h1 class="fv-title">
+        AIで書いているのに、<br />
+        なぜあなたの発信は<br />
+        <span class="gold">埋もれる</span>のか<span class="q">?</span>
+      </h1>
+
+      <p class="fv-sub">
+        書き方ではなく<strong>"選ばれる設計"</strong>を学ぶ、<br />
+        ワンランク上のAI×ライティングセミナー
+      </p>
+
+      <p class="fv-target">
+        <span class="dash">—</span>「発信しているのに反応がない」<br />
+        「AIを使っても差別化できない」<span class="dash">—</span><br />
+        そんなあなたへ。
+      </p>
+
+      <div class="fv-meta">
+        <div class="fv-meta-item">
+          <span class="fv-meta-icon">📅</span>
+          <span>
+            <span class="fv-meta-label">Date</span>
+            2026年4月27日(月) 10:00〜13:00
+          </span>
+        </div>
+        <div class="fv-meta-item">
+          <span class="fv-meta-icon">💻</span>
+          <span>
+            <span class="fv-meta-label">Style</span>
+            オンライン(Zoom)
+          </span>
+        </div>
+      </div>
+
+      <div class="fv-cta-wrap">
+        <a href="https://riko-ai.com/p/r/hoRpK3gb" class="cta cta-large" target="_blank" rel="noopener">9,800円でお申し込みはこちら</a>
+        <p class="fv-price-line">参加費 9,800円(税込)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: Empathy ========== -->
+  <section class="empathy">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Problem</span>
+        <h2 class="section-title">こんなお悩み、<span class="accent">ありませんか?</span></h2>
+      </div>
+
+      <div class="checklist">
+        <div class="check-item">
+          <span class="check-box">✓</span>
+          <span>AIで書いた投稿が、なんだか他の人と似ていて埋もれてしまう</span>
+        </div>
+        <div class="check-item">
+          <span class="check-box">✓</span>
+          <span>時間をかけて書いたのに、いいねもDMもつかない</span>
+        </div>
+        <div class="check-item">
+          <span class="check-box">✓</span>
+          <span>フォロワーはいるのに、売上に全然つながらない</span>
+        </div>
+        <div class="check-item">
+          <span class="check-box">✓</span>
+          <span>何を書けばいいのか、毎回迷ってしまう</span>
+        </div>
+        <div class="check-item">
+          <span class="check-box">✓</span>
+          <span>「それっぽい文章」にはなるけど、自分の色が出せない</span>
+        </div>
+      </div>
+
+      <p class="empathy-tail">一つでも当てはまったら、そのまま読み進めてください<span class="arrow">↓</span></p>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: Real Cause ========== -->
+  <section class="cause">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Real Cause</span>
+        <h2 class="section-title">実は、反応が出ない原因は<br /><span class="accent">"書き方"ではありません</span></h2>
+      </div>
+
+      <div class="cause-compare">
+        <div class="cause-card cause-card--old">
+          <p class="cause-label">Writing</p>
+          <p class="cause-title">書き方</p>
+          <p class="cause-note">— 皆が同じになる —</p>
+        </div>
+        <div class="cause-arrow">→</div>
+        <div class="cause-card cause-card--new">
+          <p class="cause-label">Design</p>
+          <p class="cause-title">設計</p>
+          <p class="cause-note">— 差が生まれる —</p>
+        </div>
+      </div>
+
+      <p class="cause-text">
+        AI時代は、誰でも<strong>"それっぽい文章"</strong>が書ける時代。<br />
+        だからこそ、差は<strong>「設計」</strong>で生まれます。<br />
+        多くの人がズレているのは、書き方ではなく<strong>設計の部分</strong>なのです。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: Solution ========== -->
+  <section class="solution">
+    <div class="container solution-inner">
+      <p class="solution-mark">Our Seminar</p>
+
+      <h2 class="solution-name">
+        "埋もれない発信者"になる<br />
+        <span class="gold">AI×ライティングセミナー</span>
+      </h2>
+
+      <div class="solution-divider"></div>
+
+      <p class="solution-desc">
+        AIを使いながら、<br />
+        「埋もれない・読まれる・行動される」発信の<br />
+        <strong style="color:#fff;">"設計"と"言語化"</strong>を学ぶ、<br />
+        ワンランク上の実践型セミナーです。
+      </p>
+
+      <div class="solution-keywords">
+        <span class="solution-keyword">埋もれない</span>
+        <span class="solution-keyword">読まれる</span>
+        <span class="solution-keyword">行動される</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: Before After ========== -->
+  <section class="ba">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Before &amp; After</span>
+        <h2 class="section-title">このセミナーで、あなたの発信は<br /><span class="accent">こう変わります</span></h2>
+      </div>
+
+      <div class="ba-grid">
+        <div class="ba-card ba-card--before">
+          <p class="ba-label">Before</p>
+          <ul class="ba-list">
+            <li>投稿しても反応がない</li>
+            <li>AIで書いても刺さらない</li>
+            <li>何を書けばいいかわからない</li>
+            <li>発信が自己満で終わる</li>
+          </ul>
+        </div>
+        <div class="ba-card ba-card--after">
+          <p class="ba-label">After</p>
+          <ul class="ba-list">
+            <li>埋もれない発信ができる</li>
+            <li>読まれる文章が書ける</li>
+            <li>いいね・DMが増える</li>
+            <li>売れる導線が作れる</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: Curriculum ========== -->
+  <section class="curriculum">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Curriculum</span>
+        <h2 class="section-title">3時間で学ぶ、<span class="accent">5つのステップ</span></h2>
+      </div>
+      <p class="curriculum-subtitle">— 1ステップずつ確実に、"選ばれる発信者"への道筋を —</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3 class="step-title">発信が埋もれる本当の原因</h3>
+            <p class="step-desc">スキルではなく"設計"の問題。多くの人がズレているポイントを解明します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3 class="step-title">埋もれない発信の設計</h3>
+            <p class="step-desc">誰に何を届けるかの明確化と、読者の感情を動かす構造を学びます。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3 class="step-title">AIを使った言語化</h3>
+            <p class="step-desc">AIで"それっぽい文章"を超える方法と、自分の言葉を引き出すプロンプトを公開します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h3 class="step-title">反応を生む文章の型</h3>
+            <p class="step-desc">読まれる導入・最後まで読まれる構成・行動される締め、を型で習得します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <h3 class="step-title">売れる導線の作り方</h3>
+            <p class="step-desc">発信→信頼→行動の流れを設計し、DMや申込につなげる導線を作ります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap curriculum-cta">
+        <a href="https://riko-ai.com/p/r/hoRpK3gb" class="cta" target="_blank" rel="noopener">このセミナーに参加する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7: 3 Features ========== -->
+  <section class="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Features</span>
+        <h2 class="section-title">このセミナーが他と違う、<br /><span class="accent">3つの理由</span></h2>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <p class="feature-num">01</p>
+          <h3 class="feature-title">ワークショップ形式</h3>
+          <p class="feature-desc">その場で自分の発信を作れる。<br />学んで終わりにしません。</p>
+        </div>
+        <div class="feature-card">
+          <p class="feature-num">02</p>
+          <h3 class="feature-title">プロンプト配布</h3>
+          <p class="feature-desc">再現できる状態で持ち帰れる。<br />翌日から使えます。</p>
+        </div>
+        <div class="feature-card">
+          <p class="feature-num">03</p>
+          <h3 class="feature-title">アーカイブ付き</h3>
+          <p class="feature-desc">後から何度でも復習可能。<br />忙しくても安心です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 8: Core Message ========== -->
+  <section class="core">
+    <div class="core-inner">
+      <p class="core-text">これは、<br />"AI講座"ではありません。</p>
+      <p class="core-text">"書き方"を教える講座でもありません。</p>
+
+      <div class="core-divider"></div>
+
+      <p class="core-highlight">
+        <strong>"選ばれる発信者"</strong>になるための<br />
+        "設計"を作る講座です。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 9: Instructor ========== -->
+  <section class="instructor">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Instructor</span>
+        <h2 class="section-title">講師:<span class="accent">りこ</span></h2>
+      </div>
+
+      <div class="instructor-card">
+        <div class="instructor-photo"><img src="nwe_profile.png" alt="講師 りこ プロフィール写真" /></div>
+        <div class="instructor-info">
+          <p class="instructor-role">AI × Instagram Educator</p>
+          <h3 class="instructor-name">りこ</h3>
+          <p class="instructor-subtitle">働くママのための、AI×発信の教育者</p>
+          <ul class="instructor-list">
+            <li>Instagram 約4万フォロワー</li>
+            <li>AI LABO(オンラインコミュニティ)運営 / 400名以上</li>
+            <li>CreAca(AI×Instagram講座)受講生 / 30名以上</li>
+            <li>AI×Instagramで独立・法人化(2026年)</li>
+            <li>2児の母として、働くママ向けの発信と教育を実践</li>
+          </ul>
+          <p class="instructor-bio">
+            AIを使いこなしながらも「自分らしさ」で選ばれる発信を届けてきました。<br />
+            忙しい日々の中で発信に悩む方へ、再現性ある"設計"を丁寧にお伝えします。<br />
+            当日は、あなたの発信が変わるきっかけになれたら嬉しいです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 10: Audience ========== -->
+  <section class="audience">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">For Whom</span>
+        <h2 class="section-title">こんな方に<span class="accent">おすすめです</span></h2>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card audience-card--yes">
+          <p class="audience-head"><span class="mark">✓</span>おすすめな方</p>
+          <ul class="audience-list">
+            <li>発信で収益化したい方</li>
+            <li>AIをもっと使いこなしたい方</li>
+            <li>他の発信者と差別化したい方</li>
+            <li>発信の"型"を身につけたい方</li>
+          </ul>
+        </div>
+        <div class="audience-card audience-card--no">
+          <p class="audience-head"><span class="mark">✕</span>おすすめしない方</p>
+          <ul class="audience-list">
+            <li>すぐに楽して稼ぎたい方</li>
+            <li>学んだことを実践しない方</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 11: Overview ========== -->
+  <section class="overview">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Overview</span>
+        <h2 class="section-title">開催概要</h2>
+      </div>
+
+      <div class="overview-table">
+        <div class="overview-row">
+          <div class="overview-key">日時</div>
+          <div class="overview-val">2026年4月27日(月) 10:00〜13:00</div>
+        </div>
+        <div class="overview-row">
+          <div class="overview-key">形式</div>
+          <div class="overview-val">オンライン(Zoom)</div>
+        </div>
+        <div class="overview-row">
+          <div class="overview-key">アーカイブ</div>
+          <div class="overview-val">あり(後日視聴可能)</div>
+        </div>
+        <div class="overview-row">
+          <div class="overview-key">定員</div>
+          <div class="overview-val">限定人数制</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 12: Price ========== -->
+  <section class="price" id="price">
+    <div class="container price-inner">
+      <div class="section-head">
+        <span class="eyebrow" style="color: var(--gold-400);">Price</span>
+        <h2 class="section-title" style="color:#fff;">参加費とご特典</h2>
+      </div>
+
+      <div class="price-card">
+        <p class="price-early-label">Seminar Fee</p>
+        <p class="price-early">
+          <span class="num">9,800</span><span class="yen">円</span>
+        </p>
+        <p class="price-limit">— 税込 / 全プログラム込み —</p>
+      </div>
+
+      <div class="bonus">
+        <p class="bonus-head">特 典</p>
+        <ul class="bonus-list">
+          <li>プロンプト集プレゼント</li>
+          <li>アーカイブ視聴権</li>
+          <li>ワークシート</li>
+        </ul>
+      </div>
+
+      <div class="cta-wrap">
+        <a href="https://riko-ai.com/p/r/hoRpK3gb" class="cta cta-large" target="_blank" rel="noopener">このセミナーに申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 13: FAQ ========== -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="section-title">よくあるご質問</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">初心者でも大丈夫ですか?</button>
+          <div class="faq-a"><div class="faq-a-inner">
+            はい、大丈夫です。ゼロから発信を学びたい方にも、現在発信しているけれど伸び悩んでいる方にも、実践しやすい構成でお届けします。ワークシートとプロンプトをお渡しするので、その場で取り組んでいただけます。
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">AIを使ったことがなくても参加できますか?</button>
+          <div class="faq-a"><div class="faq-a-inner">
+            はい、問題ありません。AIの使い方も含めてお伝えしますし、当日使うプロンプトもすべてご用意しています。コピーして使うだけで、すぐに再現できる状態でお持ち帰りいただけます。
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">当日参加できない場合は?</button>
+          <div class="faq-a"><div class="faq-a-inner">
+            アーカイブをご用意していますので、後日ご都合の良いタイミングでご視聴いただけます。リアルタイムで参加できない方もご安心ください。
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">返金はできますか?</button>
+          <div class="faq-a"><div class="faq-a-inner">
+            商品の性質上、ご入金後の返金は承っておりません。ご不明な点がありましたら、お申し込み前にお気軽にお問い合わせくださいませ。
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">どんな人が参加していますか?</button>
+          <div class="faq-a"><div class="faq-a-inner">
+            30〜40代の働くママさんを中心に、発信で収益化したい方、AIを活用して差別化したい方など、さまざまな方が集まっています。「自分の色で、選ばれる発信がしたい」と願う方にぴったりのセミナーです。
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 14: Final Message ========== -->
+  <section class="final" id="apply">
+    <div class="final-inner">
+      <h2 class="final-title">
+        AI時代、<br />
+        <span class="gold">"埋もれる側"</span>と<span class="gold">"選ばれる側"</span>の差は、<br />
+        これから広がります
+      </h2>
+      <p class="final-text">
+        AI時代は、発信のハードルが下がった分、<br />
+        "埋もれない人"と"埋もれる人"の差が広がっています。<br /><br />
+        この3時間で、あなたの発信を<br />
+        <strong style="color:var(--gold-400);">"選ばれる側"</strong>に変えましょう。
+      </p>
+
+      <div class="cta-wrap">
+        <a href="https://riko-ai.com/p/r/hoRpK3gb" class="cta cta-large" target="_blank" rel="noopener">今すぐ申し込む</a>
+        <span class="cta-note">参加費 9,800円(税込)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">特定商取引法に基づく表記</a>
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">お問い合わせ</a>
+      </div>
+      <p class="copyright">© 2026 Riko — AI × Writing Seminar</p>
+    </div>
+  </footer>
+
+  <!-- ========== Sticky CTA (Mobile) ========== -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="https://riko-ai.com/p/r/hoRpK3gb" class="cta" target="_blank" rel="noopener">9,800円で申し込む</a>
+  </div>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = btn.parentElement;
+        var answer = item.querySelector('.faq-a');
+        var isOpen = item.classList.contains('open');
+
+        if (isOpen) {
+          answer.style.maxHeight = '0';
+          item.classList.remove('open');
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Sticky CTA show/hide
+    var sticky = document.getElementById('stickyCta');
+    var fv = document.querySelector('.fv');
+    var final = document.querySelector('.final');
+
+    function onScroll() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      var fvBottom = fv.offsetTop + fv.offsetHeight;
+      var finalTop = final.offsetTop;
+
+      if (scrollY > fvBottom && scrollY < finalTop - window.innerHeight) {
+        sticky.classList.add('show');
+      } else {
+        sticky.classList.remove('show');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+
+</body>
+</html>
